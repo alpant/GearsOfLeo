@@ -1,0 +1,44 @@
+@startuml
+
+class Animal {
+String: name
+String: favoriteFood
+List<String> friendList
+
+makeFriend(String friendName)
+looseFriend(int index)
+hasFriend(String friendName)
+}
+
+class Dog {
+DogType: type
+}
+
+class Winged{
+double: wingspan
+String: skill
+}
+
+class Parrot{
+}
+
+class Chicken{
+}
+
+class Main{
+}
+
+Animal -left-> Main
+
+Animal <|-- Dog
+Animal <|-- Winged
+Winged <|-- Parrot
+Winged <|-- Chicken
+
+enum DogType {
+ HUNTING
+ ASSISTANCE
+ RACING
+}
+
+@enduml
